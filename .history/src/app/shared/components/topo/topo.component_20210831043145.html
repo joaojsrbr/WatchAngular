@@ -9,9 +9,16 @@
      </mat-list-option>
      <mat-divider></mat-divider>
      <mat-list-option ngFor="let shoe of typesOfShoes shoe">
-      <a mat-list-item [routerLink]="['/filmes/cadastro']">Cadastrar   novo Filme</a>
+      <a mat-list-item [routerLink]="['/filmes/cadastro']">Cadastrar novo Filme</a>
      </mat-list-option>
-     <mat-divider></mat-divider>
+    </mat-selection-list>
+
+
+    <mat-selection-list (click)="closeSideNav()" >
+      <a mat-list-item [routerLink]="['/filmes/listagem']" >Inicial</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item [routerLink]="['/filmes/cadastro']">Cadastrar novo Filme</a>
+      <mat-divider></mat-divider>
     </mat-selection-list>
 
 
