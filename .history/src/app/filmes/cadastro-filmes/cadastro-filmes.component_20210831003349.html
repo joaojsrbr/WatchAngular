@@ -42,7 +42,7 @@
             <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.nota.errors?.max"> Campo pode ter no máximo o valor 10 </mat-error>
           </mat-form-field>
           <mat-form-field class="full-width">
-            <input matInput placeholder="Link IMDb" 
+            <input matInput placeholder="Link IMDb *" 
             name="urlIMDB " 
             formControlName="urlIMDB">
             <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.urlIMDB.errors?.minlength"> Campo pode ter no Mínimo 10 caracteres </mat-error>
