@@ -2,10 +2,22 @@
   <mat-sidenav #sidenav class="sidenav" fixedInViewport="true" >
 
     <mat-toolbar color="rgba(0,0,0.85)">Menu</mat-toolbar>
+
+     <mat-expansion-panel hideToggle>
+<!-- #enddocregion hide-toggle -->
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        This is the expansion title
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p>This is the primary content of the panel.</p>
+  </mat-expansion-panel>
+
+
     
 
-    <mat-selection-list (click)="closeSideNav()" >
-      <a mat-list-item [routerLink]="['/filmes/listagem']" >Inicial</a>
+    <mat-selection-list (click)="closeSideNav()">
+      <a mat-list-item [routerLink]="['/filmes/listagem']">Inicial</a>
       <mat-divider></mat-divider>
       <a mat-list-item [routerLink]="['/filmes/cadastro']">Cadastrar novo Filme</a>
       <mat-divider></mat-divider>

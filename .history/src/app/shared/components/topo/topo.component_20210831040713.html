@@ -1,15 +1,34 @@
 <mat-sidenav-container class="sidenav-container" (backdropClick)="closeSideNav()">
   <mat-sidenav #sidenav class="sidenav" fixedInViewport="true" >
-
     <mat-toolbar color="rgba(0,0,0.85)">Menu</mat-toolbar>
-    
 
-    <mat-selection-list (click)="closeSideNav()" >
-      <a mat-list-item [routerLink]="['/filmes/listagem']" >Inicial</a>
+    <mat-selection-list (click)="closeSideNav()" shoes multiple='false' >
+      <mat-list-option ngFor="let shoe of typesOfShoes shoe">
+        <a mat-list-item [routerLink]="['/filmes/listagem']">Inicial</a>
+      </mat-list-option>
+    </mat-selection-list>
+    <mat-divider></mat-divider>
+    <mat-selection-list (click)="closeSideNav()" shoes multiple='false' >
+      <mat-list-option ngFor="let shoe of typesOfShoes shoe">
+        <a mat-list-item [routerLink]="['/filmes/cadastro']">Cadastrar novo Filme</a>
+      </mat-list-option>
+    </mat-selection-list>
+    <mat-divider></mat-divider>
+
+
+
+
+
+
+    <mat-selection-list (click)="closeSideNav()">
+      <mat-list-item  ngFor="let shoe of typesOfShoes ">
+      <a mat-list-item [routerLink]="['/filmes/listagem']">Inicial</a>
+      </mat-list-item>
       <mat-divider></mat-divider>
       <a mat-list-item [routerLink]="['/filmes/cadastro']">Cadastrar novo Filme</a>
       <mat-divider></mat-divider>
     </mat-selection-list>
+
 
 
 

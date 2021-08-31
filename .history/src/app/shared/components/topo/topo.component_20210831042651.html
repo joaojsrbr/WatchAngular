@@ -4,8 +4,8 @@
     <mat-toolbar color="rgba(0,0,0.85)">Menu</mat-toolbar>
     
 
-    <mat-selection-list (click)="closeSideNav()" >
-      <a mat-list-item [routerLink]="['/filmes/listagem']" >Inicial</a>
+    <mat-selection-list (click)="closeSideNav()" ngFor="let shoe of typesOfShoes shoe">
+      <a mat-list-item [routerLink]="['/filmes/listagem']">Inicial</a>
       <mat-divider></mat-divider>
       <a mat-list-item [routerLink]="['/filmes/cadastro']">Cadastrar novo Filme</a>
       <mat-divider></mat-divider>

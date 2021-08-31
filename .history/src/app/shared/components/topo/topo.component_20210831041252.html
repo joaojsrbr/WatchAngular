@@ -3,9 +3,15 @@
 
     <mat-toolbar color="rgba(0,0,0.85)">Menu</mat-toolbar>
     
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+      <mat-button-toggle value="bold">Bold</mat-button-toggle>
+    </mat-button-toggle-group>
 
-    <mat-selection-list (click)="closeSideNav()" >
-      <a mat-list-item [routerLink]="['/filmes/listagem']" >Inicial</a>
+
+    
+
+    <mat-selection-list (click)="closeSideNav()">
+      <a mat-list-item [routerLink]="['/filmes/listagem']">Inicial</a>
       <mat-divider></mat-divider>
       <a mat-list-item [routerLink]="['/filmes/cadastro']">Cadastrar novo Filme</a>
       <mat-divider></mat-divider>

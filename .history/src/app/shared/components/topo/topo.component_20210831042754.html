@@ -5,7 +5,7 @@
     
 
     <mat-selection-list (click)="closeSideNav()" >
-      <a mat-list-item [routerLink]="['/filmes/listagem']" >Inicial</a>
+      <a mat-list-item [routerLink]="['/filmes/listagem']" ngFor="let shoe of typesOfShoes shoe" >Inicial</a>
       <mat-divider></mat-divider>
       <a mat-list-item [routerLink]="['/filmes/cadastro']">Cadastrar novo Filme</a>
       <mat-divider></mat-divider>
