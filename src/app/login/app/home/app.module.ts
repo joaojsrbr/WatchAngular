@@ -7,6 +7,7 @@ import { AlertComponent } from "../_components/alert.component";
 import { FilmesModule } from "./filmes/filmes.module";
 import { HomeComponent } from "./home.component";
 import { RodapeComponent } from "./shared/components/rodape/rodape.component";
+import { TabelaComponent } from "./shared/components/tabela/tabela.component";
 import { TopoComponent } from "./shared/components/topo/topo.component";
 import { MaterialModule } from "./shared/material/material.module";
 
@@ -16,7 +17,8 @@ import { MaterialModule } from "./shared/material/material.module";
       HomeComponent,
       RodapeComponent,
       TopoComponent,
-      AlertComponent
+      AlertComponent,
+      TabelaComponent
     ],
     imports: [
       BrowserModule,
