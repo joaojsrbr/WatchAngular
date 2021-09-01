@@ -10,7 +10,6 @@ import { RodapeComponent } from "./shared/components/rodape/rodape.component";
 import { TopoComponent } from "./shared/components/topo/topo.component";
 import { MaterialModule } from "./shared/material/material.module";
 
-
 @NgModule({
     declarations: [
       HomeComponent,
@@ -26,7 +25,6 @@ import { MaterialModule } from "./shared/material/material.module";
       FilmesModule,
       MaterialModule
       
-      
      
       
       
@@ -34,9 +32,7 @@ import { MaterialModule } from "./shared/material/material.module";
     ],
     exports:[
     TopoComponent,
-    AlertComponent,
-    
-    
+    AlertComponent
 
     ]
     

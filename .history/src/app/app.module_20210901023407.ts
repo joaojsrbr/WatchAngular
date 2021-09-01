@@ -10,7 +10,6 @@ import {  XdAppModule } from "./login/app/home/app.module";
 import { MaterialModule } from "./login/app/home/shared/material/material.module";
 
 
-
 @NgModule({
     imports: [
         BrowserModule,
@@ -19,8 +18,7 @@ import { MaterialModule } from "./login/app/home/shared/material/material.module
         AppRoutingModule,
         BrowserAnimationsModule,
         XdAppModule,
-        MaterialModule        
-        
+        MaterialModule
 
     ],
     declarations: [

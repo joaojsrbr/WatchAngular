@@ -24,7 +24,6 @@ import { MaterialModule } from "./shared/material/material.module";
       LayoutModule,
       AppRoutingModule,
       FilmesModule,
-      MaterialModule
       
       
      
