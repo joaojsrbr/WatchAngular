@@ -1,0 +1,45 @@
+@import 'reset';
+@import 'themes';
+
+body {
+  margin: 0;
+}
+
+.center {
+  margin: 10px auto;
+}
+
+.width50 {
+  width: 50%;
+}
+
+.width75 {
+  width: 75%;
+}
+
+.main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* You can add global styles to this file, and also import other style files */
+a { cursor: pointer; }
+
+.app-container {
+    min-height: 320px;
+    overflow: hidden;
+}
+
+.btn-delete-user {
+    width: 40px;
+    text-align: center;
+    box-sizing: content-box;
+}
