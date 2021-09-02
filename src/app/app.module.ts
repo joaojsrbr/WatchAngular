@@ -19,7 +19,7 @@ import { MaterialModule } from "./login/app/home/shared/material/material.module
         AppRoutingModule,
         BrowserAnimationsModule,
         XdAppModule,
-        MaterialModule        
+        MaterialModule      
         
 
     ],

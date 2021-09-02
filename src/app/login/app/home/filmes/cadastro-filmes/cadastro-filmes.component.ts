@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FilmesService } from '../../core/filmes.service';
 import { ValidarCamposService } from '../../shared/components/campos/validar-campos.service';
+import { Filme } from '../../shared/models/filme';
 
 
 @Component({
@@ -11,9 +13,11 @@ import { ValidarCamposService } from '../../shared/components/campos/validar-cam
 export class CadastroFilmesComponent implements OnInit {
 
   cadastro: FormGroup;
+  generos: Array<string>;
 
   constructor(public validacao: ValidarCamposService, 
-    private fb: FormBuilder) { }
+    private fb: FormBuilder,
+    private filmeService: FilmesService) { }
 
   get f(){
 
@@ -28,22 +32,37 @@ export class CadastroFilmesComponent implements OnInit {
       dtLancamento: ['', [Validators.required]],
       descricao: [''],
       nota: [0, [Validators.required, Validators.min(0), Validators.max(10)]],
-      urlIMDB: ['', [Validators.minLength(10)]],
+      urlIMDb: ['', [Validators.minLength(10)]],
       genero: ['', [Validators.required]]
 
     });
 
+    this.generos = ['Ação','Romance','Aventura','Comédia','Comédia Romântica','Drama','Fantasia','Ficção Científica','Terror','Comédia Dramática'];
+
   }
 
-    salvar(): void {
+    submite(): void {
       this.cadastro.markAllAsTouched();
       if (this.cadastro.invalid){
         return;
       }
-      alert('sucesso!!\n\n' + JSON.stringify(this.cadastro.value, null, 4))
+
+      const filme = this.cadastro.getRawValue() as Filme;
+      this.salvar(filme);
     }
     reiniciarForm(): void{
      this.cadastro.reset();
+
+    }
+
+    private salvar(filme: Filme): void {
+      this.filmeService.salvar(filme).subscribe(() =>  {  
+        alert('SUCESSO')
+
+      },
+      () => {
+        alert('ERRO AO SALVAR')
+      });
 
     }
 
