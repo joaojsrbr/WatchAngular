@@ -42,7 +42,7 @@ import { AlertaComponent } from './shared/components/alerta/alerta.component';
     
 
     ],
-    entryComponents: [AlertaComponent]
+    
     
   })
   export class XdAppModule { }
