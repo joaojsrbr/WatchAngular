@@ -111,14 +111,105 @@
       "id": 11
     },
     {
-      "titulo": "Shang-Chi e a Lenda dos Dez Anéis",
-      "urlFoto": "https://m.media-amazon.com/images/M/MV5BNTliYjlkNDQtMjFlNS00NjgzLWFmMWEtYmM2Mzc2Zjg3ZjEyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UY720_.jpg",
-      "dtLancamento": "2021-09-03T03:00:00.000Z",
-      "descricao": "Shang-Chi, o mestre do Kung Fu baseado em armas desarmadas, é forçado a confrontar seu passado após ser atraído para a organização Ten Rings.",
-      "nota": 8,
-      "urlIMDb": "https://www.imdb.com/whats-on-tv/best-movies-and-tv-september-2021/ls507943320/mediaviewer/rm2567160321/",
-      "genero": "Ação",
+      "titulo": "dasda",
+      "urlFoto": "",
+      "dtLancamento": "2021-09-08T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Aventura",
       "id": 12
+    },
+    {
+      "titulo": "das",
+      "urlFoto": "",
+      "dtLancamento": "2021-09-02T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Aventura",
+      "id": 13
+    },
+    {
+      "titulo": "fdfas",
+      "urlFoto": "",
+      "dtLancamento": "2021-09-14T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Romance",
+      "id": 14
+    },
+    {
+      "titulo": "sada",
+      "urlFoto": "",
+      "dtLancamento": "2021-09-09T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Romance",
+      "id": 15
+    },
+    {
+      "titulo": "sdas",
+      "urlFoto": "",
+      "dtLancamento": "2021-09-15T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Aventura",
+      "id": 16
+    },
+    {
+      "titulo": "asdasdas",
+      "urlFoto": "",
+      "dtLancamento": "2021-09-14T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Aventura",
+      "id": 17
+    },
+    {
+      "titulo": "sdasda",
+      "urlFoto": null,
+      "dtLancamento": "2021-09-07T03:00:00.000Z",
+      "descricao": null,
+      "nota": 1,
+      "urlIMDb": null,
+      "genero": "Romance",
+      "id": 18
+    },
+    {
+      "titulo": "as",
+      "urlFoto": "",
+      "dtLancamento": "2021-09-07T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Ação",
+      "id": 19
+    },
+    {
+      "titulo": "dasdas",
+      "urlFoto": null,
+      "dtLancamento": "2021-09-01T03:00:00.000Z",
+      "descricao": null,
+      "nota": 1,
+      "urlIMDb": null,
+      "genero": "Ação",
+      "id": 20
+    }
+  ],
+  "users": [
+    {
+        "id": 1,
+        "username": "joaojsrbr",
+        "password": "22ea10a@",
+        "firstName": "joao vitor ",
+        "lastName": "da silva rocha",
+        "token": "string"
+    
     }
   ]
 }

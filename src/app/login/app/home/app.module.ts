@@ -11,6 +11,8 @@ import { TabelaComponent } from "./shared/components/tabela/tabela.component";
 import { TopoComponent } from "./shared/components/topo/topo.component";
 import { MaterialModule } from "./shared/material/material.module";
 import { AlertaComponent } from './shared/components/alerta/alerta.component';
+import { InfiniteScrollModule } from "ngx-infinite-scroll";
+
 
 
 @NgModule({
@@ -27,8 +29,8 @@ import { AlertaComponent } from './shared/components/alerta/alerta.component';
       BrowserAnimationsModule,
       LayoutModule,
       AppRoutingModule,
-      FilmesModule,
-      MaterialModule
+      MaterialModule,
+      
       
      
       

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { FilmesService } from '../../core/filmes.service';
+import { Filme } from '../../shared/models/filme';
 
 @Component({
   selector: 'dio-listagem-filmes',
@@ -7,13 +10,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListagemFilmesComponent implements OnInit {
 
-  constructor() { }
+  readonly qtdPagina = 4;
+  pagina = 0;
+  filmes: Filme[] = [];
+  filtrosListagem: FormGroup;
+  generos: Array<string>;
 
-  ngOnInit() {
+  constructor(
+    private filmesService: FilmesService,
+    private fb: FormBuilder) { }
+
+  ngOnInit(): void{
+    this.filtrosListagem =  this.fb.group({
+       texto: [''], 
+       genero: ['']
+
+    });
+
+    this.generos = ['Ação','Romance','Aventura','Comédia','Comédia Romântica','Drama','Fantasia','Ficção Científica','Terror','Comédia Dramática'];
+
+    
+    this.listarFilmes();
+  };
+
+  onScroll(): void {
+    this.listarFilmes();
+}
+
+  private listarFilmes(): void{
+    this.pagina++;
+    this.filmesService.listar(this.pagina, this.qtdPagina)
+    .subscribe((filmes: Filme[]) => this.filmes.push(...filmes));
 
   }
 
-  open() {
-  }
 
 }

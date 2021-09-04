@@ -9,6 +9,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  XdAppModule } from "./login/app/home/app.module";
 import { MaterialModule } from "./login/app/home/shared/material/material.module";
 import { AlertaComponent } from "./login/app/home/shared/components/alerta/alerta.component";
+import { InfiniteScrollModule } from "ngx-infinite-scroll";
+import { FilmesModule } from "./login/app/home/filmes/filmes.module";
+
 
 
 
@@ -20,7 +23,6 @@ import { AlertaComponent } from "./login/app/home/shared/components/alerta/alert
         AppRoutingModule,
         BrowserAnimationsModule,
         XdAppModule,
-        MaterialModule      
         
 
     ],
