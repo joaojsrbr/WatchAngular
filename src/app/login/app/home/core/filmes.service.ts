@@ -14,18 +14,26 @@ const url = 'http://localhost:3000/filmes/';
 export class FilmesService {
 
   constructor(private http: HttpClient,
-              private configService: ConfigParamsService) { }
+    private configService: ConfigParamsService) { }
 
-  salvar(filme: Filme): Observable<Filme> {
-    return this.http.post<Filme>(url, filme);
-  }
+salvar(filme: Filme): Observable<Filme> {
+return this.http.post<Filme>(url, filme);
+}
 
-  editar(filme: Filme): Observable<Filme> {
-    return this.http.put<Filme>(url + filme.id, filme);
-  }
+editar(filme: Filme): Observable<Filme> {
+return this.http.put<Filme>(url + filme.id, filme);
+}
 
-  listar(config: ConfigParams): Observable<Filme[]> {
-    const configPrams = this.configService.configurarParametros(config);
-    return this.http.get<Filme[]>(url, {params: configPrams});
-  }
+listar(config: ConfigParams): Observable<Filme[]> {
+const configPrams = this.configService.configurarParametros(config);
+return this.http.get<Filme[]>(url, {params: configPrams});
+}
+
+visualizar(id: number): Observable<Filme> {
+return this.http.get<Filme>(url + id);
+}
+
+excluir(id: number): Observable<void> {
+return this.http.delete<void>(url + id);
+}
 }

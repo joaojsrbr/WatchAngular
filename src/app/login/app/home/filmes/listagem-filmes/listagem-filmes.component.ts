@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { debounceTime } from 'rxjs/operators';
 import { FilmesService } from '../../core/filmes.service';
 import { ConfigParams } from '../../shared/models/config-params';
 import { Filme } from '../../shared/models/filme';
+
 
 @Component({
   selector: 'dio-listagem-filmes',
@@ -10,6 +13,8 @@ import { Filme } from '../../shared/models/filme';
   styleUrls: ['./listagem-filmes.component.scss']
 })
 export class ListagemFilmesComponent implements OnInit {
+
+  readonly semFoto = 'https://www.termoparts.com.br/wp-content/uploads/2017/10/no-image.jpg';
 
   config: ConfigParams = {
     pagina: 0,
@@ -22,7 +27,8 @@ export class ListagemFilmesComponent implements OnInit {
 
   constructor(
     private filmesService: FilmesService,
-    private fb: FormBuilder) { }
+    private fb: FormBuilder,
+    private router: Router ) { }
 
   ngOnInit(): void{
     this.filtrosListagem =  this.fb.group({
@@ -31,9 +37,11 @@ export class ListagemFilmesComponent implements OnInit {
 
     });
 
+    
 
 
-    this.filtrosListagem.get('texto').valueChanges.subscribe((val: string) => {
+    this.filtrosListagem.get('texto').valueChanges.pipe(debounceTime(400))
+    .subscribe((val: string) => {
       this.config.pesquisa = val;
       this.resetarConsultar();
       
@@ -51,6 +59,10 @@ export class ListagemFilmesComponent implements OnInit {
     
     this.listarFilmes();
   };
+
+  abrir(id: number): void {
+    this.router.navigateByUrl('/filmes/' + id)
+  }
 
   onScroll(): void {
     this.listarFilmes();

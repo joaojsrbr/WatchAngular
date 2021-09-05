@@ -5,7 +5,7 @@ import { AccountService } from 'src/app/login/app/_services';
 
 @Component({
   selector: 'dio-topo',
-  templateUrl: './topo.component copy.html',
+  templateUrl: './topo.component.html',
   styleUrls: ['./topo.component.scss']
 })
 export class TopoComponent implements OnInit {

@@ -4,8 +4,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './login/app/home';
 import { CadastroFilmesComponent } from './login/app/home/filmes/cadastro-filmes/cadastro-filmes.component';
-import { FilmesModule } from './login/app/home/filmes/filmes.module';
+
 import { ListagemFilmesComponent } from './login/app/home/filmes/listagem-filmes/listagem-filmes.component';
+import { VisualizarFilmesComponent } from './login/app/home/filmes/visualizar-filmes/visualizar-filmes.component';
+
 import { AuthGuard } from './login/app/_helpers';
 
 const accountModule = () => import('./login/app/account/account.module').then(x => x.AccountModule);
@@ -20,12 +22,28 @@ const routes: Routes = [
             component: ListagemFilmesComponent,
             canActivate: [AuthGuard]
           },
+          
           {
             path: 'cadastro',
-            component: CadastroFilmesComponent,
             canActivate: [AuthGuard],
-            pathMatch: 'full'
+            children:[
+              {
+                path:'',component: CadastroFilmesComponent,
+               
+              },
+              {
+                path:':id',component: CadastroFilmesComponent,
+               
+              },
+            ]
           },
+          {
+            path: ':id', 
+            component: VisualizarFilmesComponent,
+            pathMatch:'full'
+            
+        },
+         
           { path: 'user', loadChildren: usersModule, canActivate: [AuthGuard] },
           
           

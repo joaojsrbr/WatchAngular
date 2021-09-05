@@ -10,15 +10,21 @@
   }
 }
 
+.quebralinha{
+
+  white-space: pre-line;
+}
+
 .mat-card-image{
-    width: auto;
+   
     margin: auto;
     display: block;
     max-width: 182px; 
     max-height: 268px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
   }
 
+//.mat-card-title{}
 
 @media screen and (min-width: 525px) {
   .home-content {

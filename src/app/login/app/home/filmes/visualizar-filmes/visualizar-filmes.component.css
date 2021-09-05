@@ -1,0 +1,13 @@
+.mat-card-image{
+ 
+    display: block;
+    max-width: 182px; 
+    max-height: 268px;
+    padding-bottom: 10px;
+    margin: auto;
+  }
+
+.quebralinha{
+
+    white-space: pre-line;
+  }
